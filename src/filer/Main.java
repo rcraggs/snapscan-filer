@@ -21,6 +21,8 @@ public class Main extends Application {
         FilerUIController controller = loader.getController();
         controller.setInputFilePath(this.getParameters().getUnnamed().get(0));
 
+
+
         primaryStage.setTitle("ScanSnap Filer");
         primaryStage.setScene(new Scene(root, 400, 275));
         primaryStage.show();
