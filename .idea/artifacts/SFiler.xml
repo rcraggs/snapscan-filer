@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" build-on-make="true" name="SSFiler">
-    <output-path>$PROJECT_DIR$/out/artifacts/SSFiler</output-path>
+  <artifact type="javafx" build-on-make="true" name="SFiler">
+    <output-path>$PROJECT_DIR$/out/artifacts/SFiler</output-path>
     <properties id="javafx-properties">
       <options>
         <option name="appClass" value="filer.Main" />

@@ -1,13 +1,11 @@
 package filer;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyCodeCombination;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
@@ -21,6 +19,16 @@ public class Main extends Application {
                         "FilerUI.fxml"
                 )
         );
+
+        if (this.getParameters().getUnnamed().size() == 0){
+            // There are no parameters - have to fail
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("No File Provided");
+            alert.setHeaderText(null);
+            alert.setContentText("I was run without a file to move");
+            alert.showAndWait();
+            System.exit(1);
+        }
 
         Parent root = loader.load();
         FilerUIController controller = loader.getController();
